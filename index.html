@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#f5f4ef">
+    <title>Store Rating</title>
+    <link rel="stylesheet" href="styles.css">
+    <script src="app.js" defer></script>
+  </head>
+  <body>
+    <main class="page">
+      <header class="intro">
+        <p class="eyebrow">YOUR NEIGHBORHOOD GUIDE</p>
+        <h1>Good shops.<br><span>Honest ratings.</span></h1>
+        <p class="description">Share your experience and help your community shop local.</p>
+      </header>
+
+      <section class="rating-panel" aria-labelledby="rate-heading">
+        <div>
+          <p class="eyebrow">HAVE A MINUTE?</p>
+          <h2 id="rate-heading">Rate a store</h2>
+        </div>
+        <form id="rating-form">
+          <label for="store-select">Choose a store</label>
+          <select id="store-select" name="store" required>
+            <option value="urban-market">Urban Market</option>
+            <option value="green-basket">Green Basket</option>
+            <option value="corner-shop">Corner Shop</option>
+          </select>
+
+          <label for="rating-select">Your rating</label>
+          <select id="rating-select" name="rating" required>
+            <option value="5">5 — Loved it</option>
+            <option value="4">4 — Great</option>
+            <option value="3">3 — It was okay</option>
+            <option value="2">2 — Could be better</option>
+            <option value="1">1 — Not for me</option>
+          </select>
+
+          <button type="submit">Submit rating <span aria-hidden="true">→</span></button>
+          <p id="form-message" class="form-message" role="status" aria-live="polite"></p>
+        </form>
+      </section>
+
+      <section class="stores-section" aria-labelledby="stores-heading">
+        <div class="section-heading">
+          <div>
+            <p class="eyebrow">COMMUNITY FAVORITES</p>
+            <h2 id="stores-heading">Local stores</h2>
+          </div>
+          <p class="section-note">The best finds are close to home.</p>
+        </div>
+        <div id="store-list" class="store-list" aria-live="polite"></div>
+      </section>
+
+      <footer>Made for people who love shopping local.</footer>
+    </main>
+  </body>
+</html>
